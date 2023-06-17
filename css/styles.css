@@ -570,15 +570,15 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   padding: 8px 24px;
-  gap: 16px;
   background-color: var(--second-button-color);
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color var(--transition);
+  color: var(--second-title-color);
 }
 
 .footer-subscribe-btn:hover,
@@ -586,12 +586,9 @@ img {
   background-color: var(--hover-color);
 }
 
-.subscribe-btn-text {
-  color: var(--second-title-color);
-}
-
 .subscribe-icon {
   fill: var(--first-background-color);
+  margin-left: 16px;
 }
 
 /* -------------BACKDROP------------- */
