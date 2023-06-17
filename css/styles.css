@@ -657,6 +657,7 @@ img {
 }
 
 .modal-title {
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -665,17 +666,21 @@ img {
   margin-bottom: 16px;
 }
 
+.label-wrap {
+  margin-bottom: 8px;
+}
+
 .modal-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--first-border-color);
   margin-bottom: 4px;
+  display: block;
 }
 
 .input-wrap {
   position: relative;
-  margin-bottom: 8px;
 }
 
 .modal-input {
@@ -684,6 +689,7 @@ img {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding: 11px 16px 11px 38px;
+  background-color: transparent;
   outline: transparent;
 }
 
