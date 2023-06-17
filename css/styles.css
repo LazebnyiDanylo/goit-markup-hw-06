@@ -557,13 +557,18 @@ img {
   border: 1px solid var(--first-background-color);
   border-radius: 4px;
   padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: #ffffff;
 }
 
 .reg-input::placeholder {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: var(--second-title-color);
+  color: #ffffff;
 }
 
 .footer-subscribe-btn {
