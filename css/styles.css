@@ -86,6 +86,20 @@ img {
   letter-spacing: 0.04em;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* -------------HEADER------------- */
 
 .header {
@@ -473,7 +487,6 @@ img {
 
 .footer-container {
   display: flex;
-  gap: 120px;
   align-items: baseline;
 }
 
@@ -495,6 +508,10 @@ img {
 }
 
 .footer-soc {
+  margin-right: 80px;
+}
+
+.footer-soc-title {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -528,6 +545,55 @@ img {
   background-color: #31d0aa;
 }
 
+.footer-reg {
+  display: flex;
+  gap: 24px;
+}
+
+.reg-input {
+  width: 264px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid var(--first-background-color);
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.reg-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--second-title-color);
+}
+
+.footer-subscribe-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 165px;
+  height: 40px;
+  padding: 8px 24px;
+  gap: 16px;
+  background-color: var(--second-button-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.footer-subscribe-btn:hover,
+.footer-subscribe-btn:focus {
+  background-color: var(--hover-color);
+}
+
+.subscribe-btn-text {
+  color: var(--second-title-color);
+}
+
+.subscribe-icon {
+  fill: var(--first-background-color);
+}
+
 /* -------------BACKDROP------------- */
 
 .backdrop {
@@ -551,6 +617,7 @@ img {
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--transition);
   padding: 24px;
+  padding-top: 72px;
 }
 
 .backdrop.is-hidden .modal {
@@ -585,6 +652,127 @@ img {
   background-color: var(--hover-color);
   border: none;
   color: var(--first-background-color);
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--first-title-color);
+  margin-bottom: 16px;
+}
+
+.modal-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--first-border-color);
+  margin-bottom: 4px;
+}
+
+.input-wrap {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 11px 16px 11px 38px;
+  outline: transparent;
+}
+
+.input-wrap:focus-within .modal-input {
+  border-color: var(--second-button-color);
+}
+
+.input-wrap:focus-within .modal-icon {
+  fill: var(--second-button-color);
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  transition: background-color var(--transition);
+  margin-bottom: 16px;
+}
+
+.modal-textarea:focus {
+  border-color: var(--second-button-color);
+  color: var(--first-title-color);
+}
+
+.checkbox-wrap {
+  margin-bottom: 24px;
+}
+
+.checkbox-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.icon-wrap {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  fill: transparent;
+  transition: background-color var(--transition), border var(--transition);
+}
+
+.checkbox:checked + .checkbox-label span {
+  border: none;
+  background-color: var(--hover-color);
+  fill: var(--second-text-color);
+}
+
+.checkbox-link {
+  color: var(--second-button-color);
+}
+
+.send-btn {
+  color: var(--first-button-color);
+  background-color: var(--second-button-color);
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--transition);
+}
+
+.send-btn:hover,
+.send-btn:focus {
+  background-color: var(--hover-color);
 }
 
 .is-hidden {
